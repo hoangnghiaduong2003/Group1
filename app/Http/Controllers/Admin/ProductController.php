@@ -45,8 +45,8 @@ class ProductController extends Controller
     if(!$product) {
 
       $data['type'] = 'error';
-      $data['title'] = 'Thất Bại';
-      $data['content'] = 'Bạn không thể xóa sản phẩm không tồn tại!';
+      $data['title'] = 'Fail';
+      $data['content'] = 'You cannot delete products that do not exist!';
     } else {
 
       $can_delete = 1;
@@ -96,8 +96,8 @@ class ProductController extends Controller
       }
 
       $data['type'] = 'success';
-      $data['title'] = 'Thành Công';
-      $data['content'] = 'Xóa sản phẩm thành công!';
+      $data['title'] = 'Success';
+      $data['content'] = 'Delete product successfully!';
     }
 
     return response()->json($data, 200);
@@ -294,8 +294,8 @@ class ProductController extends Controller
 
     return redirect()->route('admin.product.index')->with(['alert' => [
       'type' => 'success',
-      'title' => 'Thành Công',
-      'content' => 'Thêm sản phẩm thành công.'
+      'title' => 'Success',
+      'content' => 'Add successful products.'
     ]]);
   }
 
@@ -583,8 +583,8 @@ class ProductController extends Controller
 
     return redirect()->route('admin.product.index')->with(['alert' => [
       'type' => 'success',
-      'title' => 'Thành Công',
-      'content' => 'Chỉnh sửa sản phẩm thành công.'
+      'title' => 'Success',
+      'content' => 'Edit product successfully.'
     ]]);
   }
 
@@ -595,15 +595,15 @@ class ProductController extends Controller
     if(!$promotion) {
 
       $data['type'] = 'error';
-      $data['title'] = 'Thất Bại';
-      $data['content'] = 'Bạn không thể xóa khuyễn mãi không tồn tại!';
+      $data['title'] = 'Fail';
+      $data['content'] = 'You cant delete a promotion that doesnt exist!';
     } else {
 
       $promotion->delete();
 
       $data['type'] = 'success';
-      $data['title'] = 'Thành Công';
-      $data['content'] = 'Xóa khuyến mãi thành công!';
+      $data['title'] = 'Success';
+      $data['content'] = 'Deleting the promotion successfully!';
     }
 
     return response()->json($data, 200);
@@ -616,8 +616,8 @@ class ProductController extends Controller
     if(!$product_detail) {
 
       $data['type'] = 'error';
-      $data['title'] = 'Thất Bại';
-      $data['content'] = 'Bạn không thể xóa chi tiết sản phẩm không tồn tại!';
+      $data['title'] = 'Fail';
+      $data['content'] = 'You cannot delete product details that do not exist!';
     } else {
 
       if($product_detail->import_quantity == $product_detail->quantity) {
@@ -633,8 +633,8 @@ class ProductController extends Controller
       }
 
       $data['type'] = 'success';
-      $data['title'] = 'Thành Công';
-      $data['content'] = 'Xóa chi tiết sản phẩm thành công!';
+      $data['title'] = 'Success';
+      $data['content'] = 'Delete product details successfully!';
     }
 
     return response()->json($data, 200);

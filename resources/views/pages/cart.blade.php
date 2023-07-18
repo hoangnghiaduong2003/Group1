@@ -73,11 +73,11 @@
               <div class="total-price">
                 <div class="box-price-top">
                   <div class="title">Provisional</div>
-                  <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}₫</div>
+                  <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}$</div>
                 </div>
                 <div class="box-price-up">
                   <div class="title">Thành Tiền</div>
-                  <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}₫</div>
+                  <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}$</div>
                 </div>
                 <div class="btn-action">
                   <button title="Thanh Toán Ngay" data-url="{{ route('show_checkout') }}">Pay Now</button>

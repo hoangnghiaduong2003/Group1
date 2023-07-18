@@ -28,10 +28,10 @@ class AdvertiseController extends Controller
       'date' => 'required',
       'image' => 'required',
     ], [
-      'title.required' => 'Tiêu đề quảng cáo không được để trống!',
-      'at_home_page.required' => 'Vị trí trang hiển thị phải được chọn!',
-      'date.required' => 'Ngày bắt đầu và kết thúc phải được chọn!',
-      'image.required' => 'Hình ảnh hiển thị bài viết phải được tải lên!',
+      'title.required' => 'The ad title cannot be blank!',
+      'at_home_page.required' => 'Display page position must be selected!',
+      'date.required' => 'Start and end date must be selected!',
+      'image.required' => 'The image showing the article must be uploaded!',
     ]);
 
     if ($validator->fails()) {
@@ -67,8 +67,8 @@ class AdvertiseController extends Controller
 
     return redirect()->route('admin.advertise.index')->with(['alert' => [
       'type' => 'success',
-      'title' => 'Thành Công',
-      'content' => 'Quảng cáo của bạn đã được tạo thành công.'
+      'title' => 'Success',
+      'content' => 'Your ad has been created successfully.'
     ]]);
   }
 
@@ -79,8 +79,8 @@ class AdvertiseController extends Controller
     if(!$advertise) {
 
       $data['type'] = 'error';
-      $data['title'] = 'Thất Bại';
-      $data['content'] = 'Bạn không thể xóa quảng cáo không tồn tại!';
+      $data['title'] = 'Fail';
+      $data['content'] = 'You can delete ads that don exist!';
     } else {
       Storage::disk('public')->delete('images/advertises/' . $advertise->image);
 
@@ -88,7 +88,7 @@ class AdvertiseController extends Controller
 
       $data['type'] = 'success';
       $data['title'] = 'Thành Công';
-      $data['content'] = 'Xóa quảng cáo thành công!';
+      $data['content'] = 'Successful ad removal!';
     }
 
     return response()->json($data, 200);
@@ -108,9 +108,9 @@ class AdvertiseController extends Controller
       'at_home_page' => 'required',
       'date' => 'required',
     ], [
-      'title.required' => 'Tiêu đề quảng cáo không được để trống!',
-      'at_home_page.required' => 'Vị trí trang hiển thị phải được chọn!',
-      'date.required' => 'Ngày bắt đầu và kết thúc phải được chọn!',
+      'title.required' => 'The ad title cannot be blank!',
+      'at_home_page.required' => 'Display page position must be selected!',
+      'date.required' => 'Start and end date must be selected!',
     ]);
 
     if ($validator->fails()) {
@@ -147,8 +147,8 @@ class AdvertiseController extends Controller
 
     return redirect()->route('admin.advertise.index')->with(['alert' => [
       'type' => 'success',
-      'title' => 'Thành Công',
-      'content' => 'Quảng cáo của bạn đã được cập nhật thành công.'
+      'title' => 'success',
+      'content' => 'Your ad has been updated successfully.'
     ]]);
   }
 }

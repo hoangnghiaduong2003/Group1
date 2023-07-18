@@ -142,14 +142,14 @@
                       <div class="name">{{ $item['item']->product->name }}</div>
                       <div class="color">{{ $item['item']->color }}</div>
                     </div>
-                    <div class="price">{{ number_format($item['price'],0,',','.') }}₫</div>
+                    <div class="price">{{ number_format($item['price'],0,',','.') }}$</div>
                   </div>
                 @endforeach
               </div>
               <div class="section-price">
                 <div class="temp-total-price">
                   <div class="title">Tạm Tính</div>
-                  <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}₫</div>
+                  <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}$</div>
                 </div>
                 <div class="ship-price">
                   <div class="title">Transport fee</div>
@@ -157,7 +157,7 @@
                 </div>
                 <div class="total-price">
                   <div class="title">Total</div>
-                  <div class="price" data-price="{{ $cart->totalPrice }}">{{ number_format($cart->totalPrice,0,',','.') }}₫</div>
+                  <div class="price" data-price="{{ $cart->totalPrice }}">{{ number_format($cart->totalPrice,0,',','.') }}$</div>
                 </div>
               </div>
               <div class="btn-order">

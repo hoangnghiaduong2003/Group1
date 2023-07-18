@@ -30,9 +30,9 @@ class PostController extends Controller
       'content' => 'required',
       'image' => 'required',
     ], [
-      'title.required' => 'Tiêu đề bài viết không được để trống!',
-      'content.required' => 'Nội dung bài viết không được để trống!',
-      'image.required' => 'Hình ảnh hiển thị bài viết phải được tải lên!',
+      'title.required' => 'Post title cannot be blank!',
+      'content.required' => 'Post content cannot be left blank!',
+      'image.required' => 'The image showing the article must be uploaded!',
     ]);
 
     if ($validator->fails()) {
@@ -112,8 +112,8 @@ class PostController extends Controller
     if(!$post) {
 
       $data['type'] = 'error';
-      $data['title'] = 'Thất Bại';
-      $data['content'] = 'Bạn không thể xóa bài viết không tồn tại!';
+      $data['title'] = 'Fail';
+      $data['content'] = 'You cant delete posts that dont exist!';
     } else {
       Storage::disk('public')->delete('images/posts/' . $post->image);
       if($post->content != null) {
@@ -143,8 +143,8 @@ class PostController extends Controller
       $post->delete();
 
       $data['type'] = 'success';
-      $data['title'] = 'Thành Công';
-      $data['content'] = 'Xóa bài viết thành công!';
+      $data['title'] = 'Success';
+      $data['content'] = 'Post deleted successfully!';
     }
 
     return response()->json($data, 200);
@@ -162,8 +162,8 @@ class PostController extends Controller
       'title' => 'required',
       'content' => 'required',
     ], [
-      'title.required' => 'Tiêu đề bài viết không được để trống!',
-      'content.required' => 'Nội dung bài viết không được để trống!',
+      'title.required' => 'Post title cannot be blank!',
+      'content.required' => 'Post content cannot be left blank!',
     ]);
 
     if ($validator->fails()) {
@@ -231,8 +231,8 @@ class PostController extends Controller
 
     return redirect()->route('admin.post.index')->with(['alert' => [
       'type' => 'success',
-      'title' => 'Thành Công',
-      'content' => 'Chỉnh sửa bài viết thành công.'
+      'title' => 'Success',
+      'content' => 'Edited post successfully.'
     ]]);
   }
 }

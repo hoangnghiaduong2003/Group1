@@ -76,7 +76,7 @@
                 <a href="{{ route('admin.post.index') }}" class="btn btn-flat btn-primary" title="Refresh" style="margin-right: 5px;">
                   <i class="fa fa-refresh"></i><span class="hidden-xs"> Refresh</span>
                 </a>
-                <a href="{{ route('admin.post.new') }}" class="btn btn-success btn-flat" title="New Post">
+                <a href="{{ route('adminpost.new') }}" class="btn btn-success btn-flat" title="New Post">
                   <i class="fa fa-plus" aria-hidden="true"></i><span class="hidden-xs"> New Post</span>
                 </a>
               </div>

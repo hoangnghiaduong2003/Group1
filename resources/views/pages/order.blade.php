@@ -84,7 +84,7 @@
                       <div><span>Code Bill</span> <span>{{ $data['order']->order_code }}</span></div>
                       <div><span>Payment methods</span> <span>{{ $data['order']->payment_method->name }}</span></div>
                       <div><span>Quantity</span> <span>{{ $qty }} Product</span></div>
-                      <div><span>Unit price</span> <span style="color: #f30;">{{ number_format($price,0,',','.') }}₫</span></div>
+                      <div><span>Unit price</span> <span style="color: #f30;">{{ number_format($price,0,',','.') }}$</span></div>
                     </div>
                   </div>
                 </div>
@@ -111,7 +111,7 @@
                         <td class="text-center">{{ $order_detail->product_detail->product->name }}</td>
                         <td class="text-center">{{ $order_detail->product_detail->color }}</td>
                         <td class="text-center">{{ $order_detail->quantity }}</td>
-                        <td class="text-center" style="color: #f30;">{{ number_format($order_detail->price,0,',','.') }}₫</td>
+                        <td class="text-center" style="color: #f30;">{{ number_format($order_detail->price,0,',','.') }}$</td>
                       </tr>
                     @endforeach
                   </tbody>

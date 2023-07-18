@@ -32,7 +32,7 @@
                   </p>
                 </div>
                 <div class="product-details-bottom">
-                  <span class="price pricechange">{{ number_format($item['price'],0,',','.') }}₫</span>
+                  <span class="price pricechange">{{ number_format($item['price'],0,',','.') }}$</span>
                   <div class="quantity-select">
                     <input class="variantID" type="hidden" name="variantId" value="{{ $key }}">
                     <button onclick="minus({{ $key }});" class="reduced items-count btn-minus" type="button">–</button>
@@ -45,7 +45,7 @@
           @endforeach
         </ul>
         <div>
-          <div class="top-subtotal">Total: <span class="price">{{ number_format($cart->totalPrice,0,',','.') }}₫</span></div>
+          <div class="top-subtotal">Total: <span class="price">{{ number_format($cart->totalPrice,0,',','.') }}$</span></div>
         </div>
         <div>
           <div class="actions clearfix">

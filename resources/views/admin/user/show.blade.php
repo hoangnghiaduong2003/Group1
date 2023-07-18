@@ -161,7 +161,7 @@
                               <td class="text-center" style="vertical-align: middle;">{{ $order_detail->product_detail->product->name }}</td>
                               <td class="text-center" style="vertical-align: middle;">{{ $order_detail->product_detail->color }}</td>
                               <td class="text-center" style="vertical-align: middle;">{{ $order_detail->quantity }}</td>
-                              <td class="text-center" style="color: #f30; vertical-align: middle;">{{ number_format($order_detail->price,0,',','.') }}₫</td>
+                              <td class="text-center" style="color: #f30; vertical-align: middle;">{{ number_format($order_detail->price,0,',','.') }}$</td>
                             </tr>
                           @endforeach
                         </tbody>
