@@ -21,7 +21,7 @@ class StatisticController extends Controller
    */
   public function index()
   {
-    $carbon = new Carbon('first day of this month');
+    $carbon = new Carbon('first day of this month.');
 
     $count_products = 0;
     $total_revenue = 0;
