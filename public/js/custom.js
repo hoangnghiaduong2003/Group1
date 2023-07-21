@@ -8,11 +8,11 @@ $(document).ready(function(){
 
   $('#logout').click(function(){
     Swal.fire({
-      title: 'Đăng Xuất',
-      text: "Bạn có chắc muốn đăng xuất khỏi hệ thống!",
+      title: 'Log out',
+      text: "Are you sure you want to log out of the system?!",
       type: 'question',
       confirmButtonColor: '#d33',
-      confirmButtonText: 'Đăng Xuất',
+      confirmButtonText: 'Log out',
     }).then((result) => {
       if(result.value)
         document.getElementById('logout-form').submit();

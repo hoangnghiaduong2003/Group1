@@ -265,7 +265,7 @@ CREATE TABLE IF NOT EXISTS `payment_methods` (
 --
 
 INSERT INTO `payment_methods` (`id`, `name`, `describe`, `created_at`, `updated_at`) VALUES
-(1, 'Thanh Toán Khi Nhận Hàng (COD)', 'Bạn chỉ phải thanh toán khi nhận hàng', '2019-12-23 03:12:34', '2019-12-23 03:12:34'),
+(1, 'Payment On Delivery (COD)', 'You only have to pay when you receive the goods', '2019-12-23 03:12:34', '2019-12-23 03:12:34'),
 (2, 'Thanh Toán Online (Online Payment)', 'Thanh toán qua cổng thanh toán NganLuong.VN', '2019-12-23 03:12:34', '2019-12-23 03:12:34');
 
 -- --------------------------------------------------------

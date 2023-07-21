@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Giỏ Hàng')
+@section('title', 'Cart')
 
 @section('content')
 
@@ -33,7 +33,7 @@
           <div class="row">
             <div class="col-md-4 col-md-offset-4">
               <div class="cart-empty">
-                <img src="{{ asset('images/empty-cart.png') }}" alt="Giỏ Hàng Trống">
+                <img src="{{ asset('images/empty-cart.png') }}" alt="Cart is Empty">
                 <div class="btn-cart-empty">
                   <a href="{{ route('products_page') }}" title="Tiếp tục mua sắm">Continue Shopping</a>
                 </div>

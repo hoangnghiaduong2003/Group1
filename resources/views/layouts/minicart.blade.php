@@ -52,7 +52,7 @@
             <a href="javascript:;" onclick="showCheckout($(this));" class="btn btn-gray btn-checkout" title="Thanh toán" data-url="{{ route('show_checkout') }}">
               <span>Pay</span>
             </a>
-            <a href="{{ route('show_cart') }}" class="view-cart btn btn-white margin-left-5" title="Giỏ hàng">
+            <a href="{{ route('show_cart') }}" class="view-cart btn btn-white margin-left-5" title="Cart">
               <span>Cart</span>
             </a>
           </div>

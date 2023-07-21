@@ -73,14 +73,14 @@ class LoginController extends Controller
         } else if($user->admin) {
             return redirect()->route('admin.dashboard')->with(['alert' => [
                 'type' => 'success',
-                'title' => 'Đăng nhập thành công',
+                'title' => 'Logged in successfully',
                 'content' => 'Chào mừng bạn đến với trang quản trị website PhoneStore'
             ]]);
         } else {
             return redirect()->route('home_page')->with(['alert' => [
                 'type' => 'success',
-                'title' => 'Đăng nhập thành công',
-                'content' => 'Chào mừng bạn đến với website PhoneStore của chúng tôi'
+                'title' => 'Logged in successfully',
+                'content' => 'Welcome to our PhoneStore website'
             ]]);
         }
     }
@@ -108,8 +108,8 @@ class LoginController extends Controller
     {
         return redirect()->route('home_page')->with(['alert' => [
             'type' => 'success',
-            'title' => 'Đăng xuất thành công',
-            'content' => 'Chúc bạn một ngày vui vẻ.'
+            'title' => 'Sign out successful',
+            'content' => 'Have a good day.'
         ]]);
     }
 }

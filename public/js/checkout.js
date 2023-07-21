@@ -10,35 +10,35 @@ $(document).ready(function(){
   var constraints = {
     email: {
       presence: {
-        message: "^Email không được trống!"
+        message: "^Email cannot be empty!"
       },
       email: {
-        message: "^Email không đúng định dạng!"
+        message: "^Email invalidate!"
       }
     },
     name: {
       presence: {
-        message: "^Tên không được trống!"
+        message: "^Name cannot be empty!"
       },
       length: {
         minimum: 3,
         maximum: 25,
-        message: "^Độ dài từ 3 đến 25 ký tự"
+        message: "^Length from 3 to 25 characters"
       }
     },
     phone: {
       presence: {
-        message: "^Số điện thoại không được trống!"
+        message: "^Phone number cannot be empty!"
       },
       format: {
         pattern: "0[^6421][0-9]{8}",
         flags: "i",
-        message: "^Số điện thoại không đúng định dạng!"
+        message: "^Phone number is not in the correct format!"
       }
     },
     address: {
       presence: {
-        message: "^Địa chỉ không được trống!"
+        message: "^Address cannot be empty!"
       }
     },
   };

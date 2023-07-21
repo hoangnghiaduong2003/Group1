@@ -148,7 +148,7 @@
               </div>
               <div class="section-price">
                 <div class="temp-total-price">
-                  <div class="title">Tạm Tính</div>
+                  <div class="title">Provisional</div>
                   <div class="price">{{ number_format($cart->totalPrice,0,',','.') }}$</div>
                 </div>
                 <div class="ship-price">

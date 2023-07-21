@@ -33,12 +33,12 @@ class CartController extends Controller
     $oldCart = Session::has('cart') ? Session::get('cart') : NULL;
     $cart = new Cart($oldCart);
     if(!$cart->add($product, $product->id, $request->qty)) {
-      $data['msg'] = 'Số lượng sản phẩm trong giỏ vượt quá số lượng sản phẩm trong kho!';
+      $data['msg'] = 'The number of products in the basket exceeds the number of products in stock!';
       return response()->json($data, 412);
     }
     Session::put('cart', $cart);
 
-    $data['msg'] = "Thêm giỏ hàng thành công";
+    $data['msg'] = "Add cart successfully";
     $data['url'] = route('home_page');
     $data['response'] = Session::get('cart');
 
