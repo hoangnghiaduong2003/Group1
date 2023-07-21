@@ -28,9 +28,9 @@ class UserController extends Controller
       'email' => array('required', 'regex:/^[a-z](\.?[a-z0-9]){5,}@gmail\.com$/', 'unique:users')
     );
     $messsages = array(
-      'email.required'  =>  'Email không được để trống!',
-      'email.regex'  =>  'Email không đúng định dạng!',
-      'email.unique'  =>  'Email đã tồn tại!'
+      'email.required'  =>  'Email cannot be blank!',
+      'email.regex'  =>  'Email invalidate!',
+      'email.unique'  =>  'Email already exists!'
     );
     $validator = Validator::make($request->all(), $rules, $messsages);
     if ($validator->fails()) {
