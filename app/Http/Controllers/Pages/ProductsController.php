@@ -184,7 +184,7 @@ class ProductsController extends Controller
     return back()->with(['vote_alert' => [
         'type' => 'success',
         'title' => 'Đã Gửi Đánh Giá',
-        'content' => 'Cảm ơn bạn đã đóng góp về sản phẩm này. Chúng tôi luôn luôn trân trong những đóng góp của bạn.'
+        'content' => ' ơn bạn đã đóng góp về sản phẩm này. Chúng tôi luôn luôn trân trong những đóng góp của bạn.'
     ]]);
   }
 }
