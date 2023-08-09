@@ -22,6 +22,7 @@ Route::get('active/{token}', 'Auth\RegisterController@activation')->name('active
 |--------------------------------------------------------------------------
 */
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('admin')
+
 ->group(function() {
   Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
