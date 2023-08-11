@@ -109,7 +109,7 @@
                 <th data-orderable="false" data-width="60px">Image</th>
                 <th data-orderable="false" data-width="100px">Account name</th>
                 <th data-orderable="false">Email</th>
-                <th data-orderable="false" data-width="85px">Phone number</th>
+                <th data-orderable="false" data-width="85px">Phone number.</th>
                 <th data-orderable="false">Address</th>
                 <th data-width="60px" data-type="date-euro">Date created.</th>
                 <th data-width="66px">Status</th>
