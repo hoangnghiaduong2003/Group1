@@ -68,7 +68,7 @@
           <div id="print">
             <div class="box box-default box-chart">
               <div class="box-header with-border text-center">
-                <h3 class="box-title">Monthly Business Chart {{ date('m').' Năm '.date('Y') }}</h3>
+                <h3 class="box-title">Monthly Business Chart {{ date('m').' Year '.date('Y') }}</h3>
               </div>
               <div class="box-body">
                 <div class="row">
@@ -160,7 +160,7 @@
             </div>
             <div class="box box-default box-table">
               <div class="box-header with-border text-center">
-                <h3 class="box-title">List of monthly warehouse products {{ date('m').' Năm '.date('Y') }}</h3>
+                <h3 class="box-title">List of monthly warehouse products {{ date('m').' Year '.date('Y') }}</h3>
               </div>
               <div class="box-body">
                 <div class="table-responsive">
@@ -495,7 +495,7 @@
       + label + '<br>' + Math.round(series.percent) + '%</div>'
   }
   function formatMoney(argument) {
-    return argument.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' VNĐ';
+    return argument.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + ' $';
   }
   function formatDate(argument) {
     var date = new Date(argument);

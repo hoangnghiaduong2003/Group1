@@ -110,9 +110,9 @@
                 <th data-orderable="false" data-width="100px">Account name</th>
                 <th data-orderable="false">Email</th>
                 <th data-orderable="false" data-width="85px">Phone number</th>
-                <th data-orderable="false">Địa Chỉ</th>
+                <th data-orderable="false">Address</th>
                 <th data-width="60px" data-type="date-euro">Date created</th>
-                <th data-width="66px">Trạng Thái</th>
+                <th data-width="66px">Status</th>
                 <th data-orderable="false" data-width="70px">Task</th>
               </tr>
             </thead>
@@ -140,11 +140,11 @@
                     @endif
                   </td>
                   <td>
-                    <a href="{{ route('admin.user_show', ['id' => $user->id]) }}" class="btn btn-icon btn-sm btn-primary tip" title="Chi tiết">
+                    <a href="{{ route('admin.user_show', ['id' => $user->id]) }}" class="btn btn-icon btn-sm btn-primary tip" title="Details">
                       <i class="fa fa-eye"></i>
                     </a>
                     @if(!$user->active)
-                      <a href="javascript:void(0);" data-id="{{ $user->id }}" class="btn btn-icon btn-sm btn-danger deleteDialog tip" title="Xóa" data-url="{{ route('admin.user_delete') }}">
+                      <a href="javascript:void(0);" data-id="{{ $user->id }}" class="btn btn-icon btn-sm btn-danger deleteDialog tip" title="Delete" data-url="{{ route('admin.user_delete') }}">
                         <i class="fa fa-trash"></i>
                       </a>
                     @endif

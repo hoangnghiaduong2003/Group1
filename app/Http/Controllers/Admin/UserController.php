@@ -28,9 +28,9 @@ class UserController extends Controller
       'email' => array('required', 'regex:/^[a-z](\.?[a-z0-9]){5,}@gmail\.com$/', 'unique:users')
     );
     $messsages = array(
-      'email.required'  =>  'Email không được để trống!',
-      'email.regex'  =>  'Email không đúng định dạng!',
-      'email.unique'  =>  'Email đã tồn tại!'
+      'email.required'  =>  'Email cannot be blank!',
+      'email.regex'  =>  'Email invalidate!',
+      'email.unique'  =>  'Email already exists!'
     );
     $validator = Validator::make($request->all(), $rules, $messsages);
     if ($validator->fails()) {
@@ -54,8 +54,8 @@ class UserController extends Controller
       Mail::to($user)->send(new ActiveAccountMail($data));
 
       $data['type'] = 'success';
-      $data['title'] = 'Thành Công';
-      $data['content'] = 'Thêm tài khoản thành công!';
+      $data['title'] = 'Success';
+      $data['content'] = 'Successfully added account!';
 
       return response()->json($data, 200);
     }
@@ -67,15 +67,15 @@ class UserController extends Controller
     if(!$user) {
 
       $data['type'] = 'error';
-      $data['title'] = 'Thất Bại';
-      $data['content'] = 'Bạn không thể xóa tài khoản đã kích hoạt hoặc tài khoản không tồn tại!';
+      $data['title'] = 'Error';
+      $data['content'] = 'You cant delete an activated account or an account that doesnt exist!';
     } else {
 
       $user->delete();
 
       $data['type'] = 'success';
-      $data['title'] = 'Thành Công';
-      $data['content'] = 'Xóa tài khoản thành công!';
+      $data['title'] = 'Success';
+      $data['content'] = 'Account deleted successfully!';
     }
 
     return response()->json($data, 200);
@@ -122,8 +122,8 @@ class UserController extends Controller
 
     return back()->with(['alert' => [
       'type' => 'success',
-      'title' => 'Thành Công',
-      'content' => 'Gửi email kích hoạt tài khoản thành công.'
+      'title' => 'Success',
+      'content' => 'Email account activation successfully sent.'
     ]]);
   }
 }
