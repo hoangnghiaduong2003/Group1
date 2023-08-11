@@ -150,7 +150,7 @@
                   <div class="col-sm-3 col-xs-3">
                     <div class="description-block description-profit">
                       <h5 class="description-header"><span style="color: #f30;">{{ number_format($data['total_profit'],0,',','.').' VNĐ' }}</span></h5>
-                      <span class="description-text">MONTHLY PROFIT</span>
+                      <span class="description-text">MONTHLY PROFIT.</span>
                     </div>
                     <!-- /.description-block -->
                   </div>
