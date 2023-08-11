@@ -74,7 +74,7 @@
             <div class="col-md-7 col-sm-6 col-xs-6">
               <div class="btn-group pull-right">
                 <a href="{{ route('admin.product.index') }}" class="btn btn-flat btn-primary" title="Refresh" style="margin-right: 5px;">
-                  <i class="fa fa-refresh"></i><span class="hidden-xs"> Refresh</span>
+                  <i class="fa fa-refresh"></i><span class="hidden-xs"> Refresh.</span>
                 </a>
                 <a href="{{ route('admin.product.new') }}" class="btn btn-success btn-flat" title="New Product">
                   <i class="fa fa-plus" aria-hidden="true"></i><span class="hidden-xs"> New Product</span>
